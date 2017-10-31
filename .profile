@@ -7,7 +7,6 @@ env = dict(os.environ)
 vars = [ "URL", "SCS_BASE" ]
 filtered = { var: env[var] for var in vars }
 print(json.dumps(filtered))
-print(os.getenv('VCAP_APPLICATION'))
 END
 }
 
