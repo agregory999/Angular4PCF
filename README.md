@@ -20,9 +20,11 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
+Upon first download of this repo, run `npm install` to bring in the required packaged and create the `node_modules` directory.
+
 Run `npm run build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
-To deploy, run cf push.  The reason this works with teh static buildpack is due to the presence of the manifest file with the static buildpack.
+To deploy, run `cf push`.  The reason this works with teh static buildpack is due to the presence of the manifest file with the static buildpack.
 
 ## Property Changes
 To change a config property, use cf set-env <app> <prop name> <value> and then restage the application.
