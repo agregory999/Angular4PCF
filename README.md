@@ -29,7 +29,7 @@ To deploy, run `cf push`.  The reason this works with teh static buildpack is du
 ## Property Changes
 To change a config property, use cf set-env <app> <prop name> <value> and then restage the application.
 
-Using 'cf ssh <app>' you can then view gthe new config.json within app/public inside the container.
+Using 'cf ssh <app>' you can then view the new config.json within 'app/public' inside the container.
 
 
 ## Running unit tests
