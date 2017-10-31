@@ -1,0 +1,13 @@
+applications:
+- name: property
+  instances: 1
+  buildpack: staticfile_buildpack
+  path: dist
+  memory: 32M
+  disk_quota: 32M
+  routes:
+  - route: property.cfapps.pipeline.gcp.arg-pivotal.com
+  env:
+    URL: www.pivotal.io
+    SCS_BASE: www.scs.com
+  stack: cflinuxfs2
