@@ -16,7 +16,9 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 2) package.json - look for the post-build script that copies the .profile into the resulting dist/ directory we deploy to PCF.
 
-3) Service - this one is called "dynamic" - look in src/app/properties - This service queries the /config.json file that is generated at deploy time
+3) Service - this one is called "dynamic" - look in src/app/properties - This service queries the `/config.json` file that is generated at deploy time.
+
+4) manifest.yml (for PCF) - In here we set the buildpack, lower the memory in use, and set some sample environment properties that will be retreived using the `.profile` script.
 
 ## Build
 
@@ -29,7 +31,7 @@ To deploy, run `cf push`.  The reason this works with teh static buildpack is du
 ## Property Changes
 To change a config property, use cf set-env <app> <prop name> <value> and then restage the application.
 
-Using 'cf ssh <app>' you can then view the new config.json within 'app/public' inside the container.
+Using `cf ssh <app>` you can then view the new config.json within `app/public` inside the container.
 
 
 ## Running unit tests
